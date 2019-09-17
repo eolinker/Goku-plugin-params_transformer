@@ -1,11 +1,8 @@
-### 插件名称
+# Goku Plugin：Params Transformer
 
-| 类别 |  名称 |  字段  | 属性  |
-| ------------ | ------------ | ------------ |------------ |
-| API插件 | 参数映射 | goku-params_transformer | 参数处理 |
-
-
-### 功能描述
+| 插件名称  | 文件名.so |  插件类型  | 错误处理方式 | 作用范围 |  优先级  |
+| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+| 参数映射  | goku-params_transformer | 访问策略 | 继续后续操作 | 转发前  |  800  | 801 |
 
 实现表单或json参数的映射，访问API的 **参数A** 绑定到目标API的 **参数B**，映射位置包括header、body、query。
 
@@ -15,13 +12,23 @@
 * 若参数类型为表单时，映射插件支持同名参数的使用。
 * 使用该插件时请保证Content-Type为 application/x-www-form-urlencoded、 multipart/form-data 或 application/json。
 
-### 配置页面
+# 目录
+- [安装教程](#安装教程 "安装教程")
+- [使用教程](#使用教程 "使用教程")
+- [更新日志](#更新日志 "更新日志")
+
+# 安装教程
+前往 Goku API Gateway 官方网站查看：[插件安装教程](url "https://help.eolinker.com/#/tutorial/?groupID=c-341&productID=19")
+
+# 使用教程
+
+#### 配置页面
 
 进入控制台 >> 策略管理 >> 某策略 >> API插件 >> 参数映射插件：
 
 ![](http://data.eolinker.com/course/MciueHY274fe71f0b50c5092e3774aeeccc1a1f29ca9a32)
 
-### 参数说明
+#### 配置参数
 
 | 参数名 | 说明   | 
 | ------------ | ------------ |  
@@ -41,7 +48,7 @@
 
 若paramConflictSolution为空，视为使用默认值convert。
 
-### 配置示例
+#### 配置示例
 
 ```
 {
@@ -67,7 +74,7 @@
 }
 ```
 
-### 请求示例
+#### 请求示例
 
 #### 1. required为true[该参数为必填]
 
