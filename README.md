@@ -13,9 +13,38 @@
 * 使用该插件时请保证Content-Type为 application/x-www-form-urlencoded、 multipart/form-data 或 application/json。
 
 # 目录
+- [编译教程](#编译教程 "编译教程")
 - [安装教程](#安装教程 "安装教程")
 - [使用教程](#使用教程 "使用教程")
 - [更新日志](#更新日志 "更新日志")
+
+# 编译教程
+
+#### 环境要求
+* 系统：基于 Linux 内核（2.6.23+）的系统，CentOS、RedHat 等均可；
+
+* golang版本号：12.x及其以上
+
+* 环境变量设置：
+	* GO111MODULE：on
+	
+	* GOPROXY：https://goproxy.io
+
+
+#### 编译步骤
+
+1.clone项目
+
+2.进入项目文件夹，执行**build.sh**
+```
+cd goku-params_transformer && chmod +x build.sh && ./build.sh
+```
+
+###### 注：build.sh为通用的插件编译脚本，自定义插件时可以拷贝直接使用。
+
+3.执行第2步将会生成文件： **{插件名}.so**
+
+将该文件上传到**节点服务器运行目录**下的**plugin**文件夹，然后在控制台安装插件即可使用。
 
 # 安装教程
 前往 Goku API Gateway 官方网站查看：[插件安装教程](url "https://help.eolinker.com/#/tutorial/?groupID=c-341&productID=19")
